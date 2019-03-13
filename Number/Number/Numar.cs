@@ -6,10 +6,12 @@ namespace Number
     internal class Numar
     {
         private readonly ulong v;
+        private int nrDiv;
 
         public Numar(ulong v)
         {
             this.v = v;
+            nrDiv = 0;
         }
 
         public ulong Value
@@ -27,17 +29,21 @@ namespace Number
         {
             get
             {
-                int nd = 2;
-                if (v == 1)
-                    return 1;
-                for (ulong d = 2; d <= v / 2; d++)
+                if(nrDiv == 0)
                 {
-                    if (v % d == 0)
+                    int nd = 2;
+                    if (v == 1)
+                        return 1;
+                    for (ulong d = 2; d <= v / 2; d++)
                     {
-                        nd++;
+                        if (v % d == 0)
+                        {
+                            nd++;
+                        }
                     }
                 }
-                return nd;
+                
+                return nrDiv;
             }
         
         }
