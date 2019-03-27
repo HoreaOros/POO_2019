@@ -89,17 +89,18 @@ namespace Huge
             {
                 suma[j] = (byte)((carry + left.data[j]) % 10);
                 contor++;
-                carry = (carry + left.data[i]) / 10;
+                carry = (carry + left.data[j]) / 10;
             }
-            for (j = i; j < right.Digits; j++)
+            int k;
+            for (k = i; k < right.Digits; k++)
             {
-                suma[j] = (byte)((carry + right.data[j]) % 10);
+                suma[k] = (byte)((carry + right.data[k]) % 10);
                 contor++;
-                carry = (carry + right.data[i]) / 10;
+                carry = (carry + right.data[k]) / 10;
             }
             if (carry > 0)
             {
-                suma[j] = (byte)carry;
+                suma[Math.Max(j, k)] = (byte)carry;
                 contor++;
             }
             result.data = suma;
