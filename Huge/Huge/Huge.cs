@@ -66,6 +66,11 @@ namespace Huge
 
             return sb.ToString();
         }
+        public static Huge operator+(Huge left, int right)
+        {
+            Huge rightH = new Huge(right);
+            return left + rightH;
+        }
         public static Huge operator+(Huge left, Huge right)
         {
             Huge result = new Huge();

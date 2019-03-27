@@ -22,7 +22,7 @@ namespace Huge
 
             //Console.WriteLine(product);
 
-            //Huge h4 = h2 + 1234567;
+            Huge h4 = h2 + 1234567;
 
             //Huge h5 = h1.Power(10);
 
