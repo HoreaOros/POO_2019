@@ -50,14 +50,21 @@ namespace MyArray
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-
+            
             sb.Append("[");
+
             for (int i = 0; i < size; i++)
             {
                 sb.Append(arr[i]);
                 sb.Append(", ");
             }
-            sb.Remove(sb.Length - 2, 2);
+
+            // daca size este zero nu am ce sa elimin.
+            if (size > 0)
+            {
+                sb.Remove(sb.Length - 2, 2); // elimin ultimul ", " care nu e necesar la sfarsit
+            }
+            
             sb.Append("]");
             return sb.ToString();
         }
