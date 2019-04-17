@@ -28,6 +28,23 @@ namespace Matrix
             Console.WriteLine(p);
 
 
+            Matrix t = p.Transpose();
+
+            if (m1 == m2)
+            {
+                Console.WriteLine("Matricile sunt egale");
+            }
+
+            // TODO
+            //if (t.Rare())
+            //{
+            //    RareMatrix rm = new RareMatrix(t);
+            //}
+
+            // Sqaure matrix operations.
+
+
+
         }
     }
 }

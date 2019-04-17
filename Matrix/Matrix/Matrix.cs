@@ -106,5 +106,13 @@ namespace Matrix
                 data[i, j] = value;
             }
         }
+        public static bool operator==(Matrix a, Matrix b)
+        {
+            throw new NotImplementedException();
+        }
+        public static bool operator !=(Matrix a, Matrix b)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
