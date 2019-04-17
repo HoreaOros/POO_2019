@@ -20,6 +20,9 @@ namespace MyArray
             Console.WriteLine(ma);
 
 
+            MyArray zeroArray = new MyArray(0);
+            Console.WriteLine(zeroArray);
+
             //TODO
             // elimina toate aparatiile argumenului din vector
             //ma.Remove(14);
@@ -34,23 +37,23 @@ namespace MyArray
             // suma elementelor din vector
             // int suma = ma.Sum();
 
-            int value = 9;
-            MyArray indexes = ma.FindAll(value);
-            Console.WriteLine(indexes);
+            //int value = 9;
+            //MyArray indexes = ma.FindAll(value);
+            //Console.WriteLine(indexes);
 
-            // modifica vectorul
-            ma.BubbleSort();
-            Console.WriteLine(ma);
+            //// modifica vectorul
+            //ma.BubbleSort();
+            //Console.WriteLine(ma);
 
 
-            ma.InsertionSort();
+            //ma.InsertionSort();
 
-            ma.SelectionSort();
+            //ma.SelectionSort();
 
-            // muta toate elementele din vector o pozitie la stanga
-            // primul element ajunge pe ultima pozitie. 
-            ma.RotateLeft();
-            Console.WriteLine(ma);
+            //// muta toate elementele din vector o pozitie la stanga
+            //// primul element ajunge pe ultima pozitie. 
+            //ma.RotateLeft();
+            //Console.WriteLine(ma);
         }
     }
 }
