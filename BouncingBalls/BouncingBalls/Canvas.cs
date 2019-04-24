@@ -40,6 +40,48 @@ namespace BouncingBalls
             }
         }
 
+        internal void Step()
+        {
+            for (int i = 0; i < balls.Count; i++)
+            {
+                balls[i].X += balls[i].SpeedX;
+                balls[i].Y += balls[i].SpeedY;
+            }
+
+            // verific daca vreo bila a ajuns la blackHole
+            // in caz afirmativ o elimin si creste BH
+            foreach (var item in balls)
+            {
+                if (item.CheckCollision(bh))
+                {
+                    bh.Bang(item);
+                    balls.Remove(item);
+                }
+            }
+
+
+            // verific daca sunt coliziuni intre bile. 
+            // in caz afirmativ cea mai mica este eliminata 
+            // si cea mai mare creste
+
+            for (int i = 0; i < balls.Count - 1; i++)
+            {
+                for (int j = i + 1; j < balls.Count; j++)
+                {
+                    if (balls[i].BBExists && balls[j].BBExists)
+                    {
+                        if (balls[i].CheckCollision(balls[j]))
+                        {
+                            // TODO
+                        }
+                    }
+                }
+            }
+
+
+            // verific daca vreo o bila a ajuns la margine si in caz afirmativ fac Bounce
+        }
+
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();

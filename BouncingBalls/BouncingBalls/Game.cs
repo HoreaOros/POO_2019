@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Threading;
 namespace BouncingBalls
 {
     internal class Game
@@ -32,7 +32,11 @@ namespace BouncingBalls
 
         internal void Play()
         {
-            
+            while (true)
+            {
+                c.Step();
+                Thread.Sleep(1000);
+            }
         }
 
        

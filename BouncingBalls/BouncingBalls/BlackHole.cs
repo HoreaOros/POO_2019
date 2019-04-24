@@ -1,10 +1,14 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 
 namespace BouncingBalls
 {
     internal class BlackHole : Ball
     {
-
+        public override bool Exists()
+        {
+            return true;
+        }
         public BlackHole(int x, int y, int r): base(x, y, r)
         {
             
@@ -18,5 +22,7 @@ namespace BouncingBalls
 
             return sb.ToString();
         }
+
+        
     }
 }

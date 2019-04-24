@@ -5,6 +5,23 @@ namespace BouncingBalls
     {
         private int speedx, speedy;
 
+        public override bool Exists()
+        {
+            return exists;
+        }
+
+        public bool BBExists
+        {
+            get
+            {
+                return exists;
+            }
+            set
+            {
+                exists = value;
+            }
+        }
+
         public BouncingBall(int x, int y, int r, int sx, int sy): base(x, y, r)
         {
             speedx = sx;
@@ -25,11 +42,11 @@ namespace BouncingBalls
                 return speedy;
             }
         }
-        public void BounceXSpeed()
+        private void BounceXSpeed()
         {
             speedx = -speedx;
         }
-        public void BounceYSpeed()
+        private void BounceYSpeed()
         {
             speedy = -speedy;
         }
@@ -41,6 +58,11 @@ namespace BouncingBalls
             sb.Append("]");
 
             return sb.ToString();
+        }
+        public void CheckBounds()
+        {
+            
+
         }
     }
 
