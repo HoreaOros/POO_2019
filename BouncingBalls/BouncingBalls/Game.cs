@@ -36,6 +36,10 @@ namespace BouncingBalls
             {
                 c.Step();
                 Thread.Sleep(1000);
+                if (true) // conditia de oprire a jocului
+                {
+                    // break;
+                }
             }
         }
 

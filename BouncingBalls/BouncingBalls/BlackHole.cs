@@ -22,7 +22,5 @@ namespace BouncingBalls
 
             return sb.ToString();
         }
-
-        
     }
 }
