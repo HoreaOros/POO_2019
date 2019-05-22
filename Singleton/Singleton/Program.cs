@@ -8,7 +8,9 @@ namespace Singleton
         {
             Singleton s = Singleton.getInstance();
 
-            Filestream
+
+
+            
             Singleton t = Singleton.getInstance();
         }
     }

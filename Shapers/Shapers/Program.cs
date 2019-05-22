@@ -6,6 +6,7 @@ namespace Shapers
     {
         static void Main(string[] args)
         {
+            //testRnd();
             Circle c = new Circle();
             Console.WriteLine(c);
 
@@ -35,9 +36,40 @@ namespace Shapers
                 }
             }
 
-            foreach (var item in lst)
+            foreach (Shape item in lst)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(item.ToString());
+            }
+        }
+
+        private static void testRnd()
+        {
+            Random rnd = new Random();
+
+            int[] v = new int[10];
+
+
+            for (int i = 0; i < 100000; i++)
+            {
+                for (int j = 0; j < v.Length; j++)
+                {
+                    v[j] = rnd.Next(3);
+                }
+                bool toateEgale = true;
+                for (int j = 1; j < v.Length; j++)
+                {
+                    if (v[j] != v[j - 1])
+                    {
+                        toateEgale = false;
+                        break;
+                    }
+                }
+                if (toateEgale)
+                {
+                    Console.WriteLine("Toate egale  - {0}", i);
+                    break;
+                }
+                    
             }
         }
     }
