@@ -7,6 +7,7 @@ namespace Bars
 
         public VertBar(int v)
         {
+			//tyghhjhb
             this.inaltime = v;
             for (int i = 0; i < inaltime; i++)
             {
